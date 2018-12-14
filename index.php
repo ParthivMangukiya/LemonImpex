@@ -5,7 +5,6 @@ require __DIR__.'/data/config.php';
 
 $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
 $twig = new Twig_Environment($loader, array(
-    'cache' => __DIR__.'/cache',
 ));
 ?>
 <html lang="en">
@@ -50,7 +49,6 @@ $twig = new Twig_Environment($loader, array(
 
         <?php include('header.php'); ?>
 
-
         <!--================Slider Area =================-->
         <section class="main_slider_area">
             <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
@@ -82,7 +80,7 @@ $twig = new Twig_Environment($loader, array(
                                 <span style="text-decoration: underline;padding-left: 10px;">Watch The Overview</span>
                             </div>
 
-                            <!-- LAYER NR. 10 -->
+                            <!-- LAYER NR. 10
                             <div class="tp-caption   tp-resizeme tp-videolayer"
                             id="slide-2971-layer-15"
                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -104,7 +102,7 @@ $twig = new Twig_Environment($loader, array(
                             style="z-index: 14;text-transform:left;border-width:0px;"> 
                             </div>
 
-                            <!-- LAYER NR. 11 -->
+                            
                             <div class="tp-caption Agency-CloseBtn rev-btn "
                             id="slide-2971-layer-20"
                             data-x="['center','center','center','center']" data-hoffset="['510','389','270','199']"
@@ -124,7 +122,7 @@ $twig = new Twig_Environment($loader, array(
                             data-paddingbottom="[0,0,0,0]"
                             data-paddingleft="[0,0,0,0]"
                             data-lasttriggerstate="reset"
-                            style="z-index: 15; min-width: 50px; max-width: 50px; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;font-size: 24px;"><i class="fa fa-close"></i> </div>
+                            style="z-index: 15; min-width: 50px; max-width: 50px; white-space: nowrap;text-transform:left;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;font-size: 24px;"><i class="fa fa-close"></i> </div> -->
 
                             <div class="tp-caption tp-resizeme secand_text"
                                 data-x="['center','center','center','center','center','center']"
@@ -321,24 +319,22 @@ $twig = new Twig_Environment($loader, array(
                     <p>We as a Creative Company, Focus on Growing Brands across The World</p>
                 </div>
                 <div class="l_news_inner">
-                    <div class="row">
-                        <?php
-                        $event_helper = new EventHelper($db);
-                        $events = $event_helper->getThreeEvents();
-                        foreach($events as $event) {
-                            $img_src = $event[EventImage::COL_URL];
-                            $event_id = $event[EVENT::COL_ID];
-                            $title = $event[EVENT::COL_NAME];
-                            $description = $event[EVENT::COL_DESCRIPTION];
-                            $event_tmpl = array(
-                                'img_src' => $img_src,
-                                'title' => $title,
-                                'description' => $description
-                            ); 
-                            echo $twig->render('event_tile.twig',$event_tmpl);
-                        }
-                        ?>
-                    </div>
+                    <?php
+                    $event_helper = new EventHelper($db);
+                    $events = $event_helper->getLatestThreeEvents();
+                    foreach($events['data'] as $event) {
+                        $img_src = $event[EventImage::COL_URL];
+                        $event_id = $event[EVENT::COL_ID];
+                        $title = $event[EVENT::COL_NAME];
+                        $short_description = $event[EVENT::COL_SHORT_DESCRIPTION];
+                        $event_tmpl = array(
+                            'img_src' => $img_src,
+                            'title' => $title,
+                            'short_description' => $short_description
+                        ); 
+                        echo $twig->render('event_tile.twig',$event_tmpl);
+                    }
+                    ?>
                 </div>
             </div>
         </section>

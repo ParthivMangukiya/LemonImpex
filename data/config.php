@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-ob_start();
 require_once('constant.php');
 
 $db = new PDO("mysql:host=".DBHOST.";port=".DBPORT.";dbname=".DBNAME, DBUSER, DBPASS);

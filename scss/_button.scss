@@ -108,7 +108,7 @@
 }
 
 .more_btn{
-    color: #2bc0a4;
+    color: #ccaa3c;
     font-size: 14px;
     font-family: $pop;
     text-decoration: underline;
@@ -116,7 +116,7 @@
     @include transition;
     &:hover{
         text-decoration: none;
-        color: #2bc0a4;
+        color: #ccaa3c;
     }
 }
 

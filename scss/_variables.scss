@@ -3,7 +3,7 @@ $pop: 'Poppins', sans-serif;
 $play: 'Playfair Display', serif;
 /*Color Variables*/
 
-$baseColor: #2bc0a4;
+$baseColor: #ccaa3c;
 $dip: #232d37;
 //$gray: #757575;
 $pfont: #51545f;
@@ -12,6 +12,8 @@ $pfont: #51545f;
 
 // Mixins
 @mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    -webkit-transition: $property $duration $animate $delay; 
+    -o-transition: $property $duration $animate $delay; 
     transition: $property $duration $animate $delay; 
 }
 
