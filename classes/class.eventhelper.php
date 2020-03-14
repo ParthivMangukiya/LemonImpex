@@ -14,6 +14,8 @@
                 Event::COL_NAME . ' , '.
                 Event::COL_SHORT_DESCRIPTION . ' , '.
                 Event::COL_DESCRIPTION . ' , '.
+                Event::COL_DATE_BEGIN . ' , '.
+                Event::COL_DATE_END . ' , '.
                 EventImage::COL_URL .
                 ' FROM ' . Event::TAB_NAME .
                 ' LEFT JOIN ' . EventImage::TAB_NAME . 
@@ -60,6 +62,37 @@
                 $res['data'] = $data;
                 $res['error'] = false; 
                 
+                return $res;
+            } catch(PDOException $e) {
+                $res = [];
+                $res['data'] = [];
+                $res['error'] = true;
+                return $res;
+            }
+        }
+
+        public function getEventById($id) {
+            try {
+                $res = [];
+                $query = 'SELECT * FROM ' . Event::TAB_NAME .
+                ' WHERE ' . Event::COL_ID . ' = ' . $id .
+                ' ORDER BY ' . Event::COL_DATE_BEGIN . ' DESC ';
+                $stmt = $this->_db->query($query);
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $stmt->closeCursor();
+                $data = [];
+                foreach($result as $row) {
+                    $query = 'SELECT ' . EventImage::COL_URL . 
+                        ' FROM ' . EventImage::TAB_NAME . 
+                        ' WHERE ' . EventImage::COL_EVENT_ID .
+                        ' = ' . $row[Event::COL_ID];
+                    $stmt = $this->_db->query($query);
+                    $images = $stmt->fetchAll(PDO::FETCH_COLUMN);
+                    $row['images'] = $images;
+                    array_push($data,$row);
+                }
+                $res['data'] = $data;
+                $res['error'] = false; 
                 return $res;
             } catch(PDOException $e) {
                 $res = [];

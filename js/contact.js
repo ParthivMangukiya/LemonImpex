@@ -16,9 +16,10 @@ $(document).ready(function(){
                     required: true,
                     minlength: 2
                 },
-                subject: {
+                mobile: {
                     required: true,
-                    minlength: 4
+                    minlength: 10,
+                    maxlength: 10
                 },
                 number: {
                     required: true,
@@ -29,36 +30,27 @@ $(document).ready(function(){
                     email: true
                 },
                 message: {
-                    required: true,
-                    minlength: 20
+                    required: false
                 }
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
+                    required: "Please enter your name?",
                     minlength: "your name must consist of at least 2 characters"
                 },
-                subject: {
-                    required: "come on, you have a subject, don't you?",
-                    minlength: "your subject must consist of at least 4 characters"
-                },
-                number: {
-                    required: "come on, you have a number, don't you?",
-                    minlength: "your Number must consist of at least 5 characters"
+                mobile: {
+                    required: "Please enter your mobile number?",
+                    minlength: "your mobile must consist 10 number only"
                 },
                 email: {
-                    required: "no email, no message"
-                },
-                message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
+                    required: "Please give us email id through which we can call you"
                 }
             },
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    url:"api/v1/contact_us",
                     success: function() {
                         $('#contactForm :input').attr('disabled', 'disabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {
@@ -83,3 +75,7 @@ $(document).ready(function(){
         
  })(jQuery)
 })
+
+function clearForm() {
+    $('#contactForm').find("input[type=text], input[type=email], input[type=tel] ,textarea").val("");
+}

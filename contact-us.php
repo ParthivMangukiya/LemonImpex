@@ -17,13 +17,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Rev slider css -->
-        <link href="vendors/revolution/css/settings.css" rel="stylesheet">
-        <link href="vendors/revolution/css/layers.css" rel="stylesheet">
-        <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
         <link href="vendors/animate-css/animate.css" rel="stylesheet">
-
-        <!-- Extra plugin css -->
-        <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
 
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
@@ -37,23 +31,34 @@
     </head>
     <body>
 
-        <!--================Search Area =================-->
-        <section class="search_area">
-            <div class="search_inner">
-                <input type="text" placeholder="Enter Your Search...">
-                <i class="ti-close"></i>
-            </div>
-        </section>
-        <!--================End Search Area =================-->
+        <?php
+            require __DIR__.'/vendor/autoload.php';
+            require __DIR__.'/data/config.php';
 
-        <?php include('header.php'); ?>
+            $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
+            $twig = new Twig_Environment($loader, array(
+            ));
+            
+        ?>
+
+        <?php 
+            $pages = array(
+                array('link'=>'index.php','title'=>'Home'),
+                array('link'=>'why_us.php','title'=>'Why Us'),
+                array('link'=>'event.php','title'=>'Events'),
+                array('link'=>'#','title'=>'Contact','active'=>'active')
+            );
+            $header_tmpl = array(
+                'pages' => $pages
+            ); 
+            echo $twig->render('header.twig',$header_tmpl);
+        ?>
 
         <!--================Banner Area =================-->
         <section class="banner_area">
             <div class="container">
                 <div class="banner_text_inner">
                     <h4>Contact Us</h4>
-                    <h5>Tell us about your story and your project.</h5>
                 </div>
             </div>
         </section>
@@ -63,13 +68,13 @@
         <section class="contact_us_area">
             <div class="container">
                 <div id="mapBox" class="mapBox row m0"
-                    data-lat="1.30921"
-                    data-lon="103.8509813"
-                    data-zoom="14"
+                    data-lat="22.297900"
+                    data-lon="114.174530"
+                    data-zoom="18"
                     data-marker="img/map-marker.png"
                     data-info="Broadway Hotel"
-                    data-mlat="1.30921"
-                    data-mlon="103.8509813">
+                    data-mlat="22.297900"
+                    data-mlon="114.174530">
                 </div>
                 <div class="contact_details_inner">
                     <div class="row">
@@ -81,26 +86,12 @@
                                 </div>
                                 <div class="contact_d_list">
                                     <div class="contact_d_list_item">
-                                        <a href="#">(800) 686-6688</a>
-                                        <a href="#">info.deercreative@gmail.com</a>
+                                        <a href="#">(+852) 5616 3534</a>
+                                        <a href="#">info@lemonimpexhk.com</a>
                                     </div>
                                     <div class="contact_d_list_item">
-                                        <p>40 Baria Sreet 133/2 <br /> NewYork City, US</p>
+                                        <p> 405, Hart Avenue Plaza <br> TST, Hong Kong</p>
                                     </div>
-                                    <div class="contact_d_list_item">
-                                        <p>Open hours: 8.00-18.00 Mon-Fri <br />Sunday: Closed</p>
-                                    </div>
-                                </div>
-                                <div class="static_social">
-                                    <div class="main_title">
-                                        <h2>Follow Us:</h2>
-                                    </div>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +101,7 @@
                                     <h2>Get In Touch With Us!</h2>
                                     <p>Fill out the form below to recieve a free and confidential.</p>
                                 </div>
-                                <form class="contact_us_form row" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                                <form class="contact_us_form row" action="api/v1/contact_us" method="post" id="contactForm" novalidate="novalidate">
                                     <div class="form-group col-lg-12">
                                         <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                                     </div>
@@ -118,13 +109,13 @@
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                     <div class="form-group col-lg-12">
-                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Website">
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number">
                                     </div>
                                     <div class="form-group col-lg-12">
                                         <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <button type="submit" value="submit" class="btn submit_btn2 form-control">Send Messages</button>
+                                        <button type="submit" value="submit" class="btn submit_btn2 form-control">Send Message</button>
                                     </div>
                                 </form>
                             </div>
@@ -142,7 +133,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" onclick="clearForm()" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-close"></i>
                         </button>
                         <h2>Thank you</h2>
@@ -158,7 +149,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" onclick="clearForm()" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-close"></i>
                         </button>
                         <h2>Sorry !</h2>
@@ -175,27 +166,8 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <!-- Rev slider js -->
-        <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <!-- Extra plugin css -->
-        <script src="vendors/counterup/jquery.waypoints.min.js"></script>
-        <script src="vendors/counterup/jquery.counterup.min.js"></script>
-        <script src="vendors/counterup/apear.js"></script>
-        <script src="vendors/counterup/countto.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/parallaxer/jquery.parallax-1.1.3.js"></script>
-        <!--Tweets-->
-        <script src="vendors/tweet/tweetie.min.js"></script>
-        <script src="vendors/tweet/script.js"></script>
         <!--gmaps Js-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADDgQkESfP_nIbWcqcf8DpCWrv3yJHSbA"></script>
         <script src="js/gmaps.min.js"></script>
 
         <!-- contact js -->

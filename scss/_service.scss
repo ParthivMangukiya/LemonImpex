@@ -1,7 +1,7 @@
 /* Our Service Area css
 ============================================================================================ */
 .service_area{
-    background: url(../img/diamond_wallpaper.jpg) no-repeat fixed center center;
+    background: url(../img/home/leibish.jpg) no-repeat fixed center center;
     background-size: cover;
     position: relative;
     z-index: 2;
@@ -23,13 +23,35 @@
 .service_item{
     text-align: center;
     color: #fff;
-    
-    h4{
-        font-size: 20px;
-        font-family: $pop;
-        font-weight: 500;
-        padding: 18px 0px 12px 0px;
+
+    @media screen and (max-width: 768px) {
+        h1{
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        h4{
+            font-size: 12px;
+            font-family: $pop;
+            font-weight: 500;
+            padding: 18px 0px 12px 0px;
+        }
     }
+    
+    @media screen and (min-width: 769px) {
+        h1{
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        h4{
+            font-size: 20px;
+            font-family: $pop;
+            font-weight: 500;
+            padding: 18px 0px 12px 0px;
+        }
+    }
+
     p{
         font-size: 14px;
         line-height: 26px;

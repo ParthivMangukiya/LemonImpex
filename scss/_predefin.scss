@@ -121,6 +121,24 @@ i{
     }
 }
 
+//----------------------------------
+
+.vr {
+    border-right: 1px solid #ccc !important;
+ }
+
+ .box {
+    border: 1px solid rgba(255,179,0,0.2);
+    padding: 20px;
+    display: block;
+    margin: 0;
+    color: #fff;
+    float: left;
+    margin-bottom: 30px;
+}
+//----------------------------------
 /* Main title css
 ============================================================================================ */
-
+.align-center-flex {
+    align-items: center
+}

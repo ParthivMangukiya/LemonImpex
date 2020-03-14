@@ -9,7 +9,7 @@
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #2a60d3 0%, #ccaa3c 51%, #2a60d3 100%);
+    background-image: linear-gradient(to right, #f4511e 0%, #ffbe00 51%, #f4511e 100%);
     text-align: center;
     position: relative;
     background-size: 200% auto;
@@ -40,9 +40,9 @@
     color: #fff;
     border-width: 2px;
     border-style: solid;
-    border-image: -moz-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(42,96,211) 100%);
-    border-image: -webkit-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(42,96,211) 100%);
-    border-image: -ms-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(42,96,211) 100%);
+    border-image: -moz-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(244,81,30) 100%);
+    border-image: -webkit-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(244,81,30) 100%);
+    border-image: -ms-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(244,81,30) 100%);
     border-image-slice: 1;
     display: block;
     line-height: 42px;
@@ -62,9 +62,9 @@
         top: -2px;
         border-width: 2px;
         border-style: solid;
-        border-image: -moz-linear-gradient( 180deg, rgb(42,96,211) 0%, rgb(204,170,60) 100%);
-        border-image: -webkit-linear-gradient( 180deg, rgb(42,96,211) 0%, rgb(204,170,60) 100%);
-        border-image: -ms-linear-gradient( 180deg, rgb(42,96,211) 0%, rgb(204,170,60) 100%);
+        border-image: -moz-linear-gradient( 180deg, rgb(244,81,30) 0%, rgb(204,170,60) 100%);
+        border-image: -webkit-linear-gradient( 180deg, rgb(244,81,30) 0%, rgb(204,170,60) 100%);
+        border-image: -ms-linear-gradient( 180deg, rgb(244,81,30) 0%, rgb(204,170,60) 100%);
         border-image-slice: 1;
         transition: all 400ms ease-out;
         z-index: -1;
@@ -87,7 +87,7 @@
     width: 160px;
     height: 46px;
     line-height: 46px; 
-    background-image: linear-gradient(to right, #2a60d3 0%, #ccaa3c 51%, #2a60d3 100%);
+    background-image: linear-gradient(to right, #f4511e 0%, #ffbe00 51%, #f4511e 100%);
     transition: all 400ms ease-out !important;
     background-size: 200% auto;
     border: none;
@@ -101,14 +101,14 @@
         color: #fff;
     }
     &:focus{
-        background-image: linear-gradient(to right, #2a60d3 0%, #ccaa3c 51%, #2a60d3 100%) !important;
+        background-image: linear-gradient(to right, #f4511e 0%, #ffbe00 51%, #f4511e 100%) !important;
         transition: all 400ms ease-out !important;
         background-size: 200% auto;
     }
 }
 
 .more_btn{
-    color: #ccaa3c;
+    color: #ffbe00;
     font-size: 14px;
     font-family: $pop;
     text-decoration: underline;
@@ -116,7 +116,7 @@
     @include transition;
     &:hover{
         text-decoration: none;
-        color: #ccaa3c;
+        color: #ffbe00;
     }
 }
 
@@ -128,7 +128,7 @@
     color: #fff;
     text-align: center;
     padding: 0px 10px;
-    background-image: linear-gradient(to right, #2a60d3 0%, #ccaa3c 51%, #2a60d3 100%);
+    background-image: linear-gradient(to right, #f4511e 0%, #ffbe00 51%, #f4511e 100%);
     transition: all 400ms ease-out;
     background-size: 200% auto;
     border: none;
@@ -141,7 +141,7 @@
         color: #fff;
     }
     &:focus{
-        background-image: linear-gradient(to right, #2a60d3 0%, #ccaa3c 51%, #2a60d3 100%) !important;
+        background-image: linear-gradient(to right, #f4511e 0%, #ffbe00 51%, #f4511e 100%) !important;
         transition: all 400ms ease-out;
         background-size: 200% auto;
     }
@@ -156,7 +156,7 @@
     font-weight: 600;
     font-size: 13px;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, #2a60d3 0%, #ccaa3c 51%, #2a60d3 100%);
+    background-image: linear-gradient(to right, #f4511e 0%, #ffbe00 51%, #f4511e 100%);
     text-align: center;
     position: relative;
     background-size: 200% auto;

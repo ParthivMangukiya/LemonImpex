@@ -64,7 +64,7 @@
             }
             &:hover{
                 a{
-                    color: #ccaa3c;
+                    color: #ffbe00;
                 }
             }
             &:last-child{
@@ -82,7 +82,7 @@
                     .tweet_text{
                         i{
                             padding-right: 5px;
-                            color: #ccaa3c;
+                            color: #ffbe00;
                         }
                         font-size: 14px;
                         line-height: 26px;
@@ -95,7 +95,7 @@
                             font-family: $pop;
                             @include transition;
                             &:hover{
-                                color: #ccaa3c;
+                                color: #ffbe00;
                             }
                         }
                     }
@@ -112,7 +112,7 @@
                         a{
                             font-size: 14px;
                             line-height: 26px;
-                            color: #ccaa3c;
+                            color: #ffbe00;
                             font-family: $pop;
                         }
                     }
@@ -147,7 +147,7 @@
             &:hover{
                 a{
                     padding-left: 15px;
-                    color: #ccaa3c;
+                    color: #ffbe00;
                     i{
                         opacity: 1;
                     }
@@ -164,7 +164,7 @@
         font-family: $pop;
         @include transition;
         &:hover{
-            color: #ccaa3c;
+            color: #ffbe00;
         }
     }
     p{
@@ -190,7 +190,7 @@
                 font-family: $pop;
                 line-height: 50px;
                 &:hover{
-                    color: #ccaa3c;
+                    color: #ffbe00;
                 }
             }
         }
@@ -211,7 +211,7 @@
                 }
                 &:hover{
                     a{
-                        color: #ccaa3c;
+                        color: #ffbe00;
                     }
                 }
             }

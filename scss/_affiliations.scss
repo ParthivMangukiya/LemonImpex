@@ -1,0 +1,59 @@
+/* Our Affiliations Area css
+============================================================================================ */
+.affiliation_area{
+    background: #fff;
+    padding: 100px 0px;
+
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+.affiliations_logos {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+        padding: 0;
+        margin: 30px 30px;
+        text-align: center;
+        display: inline-block;
+        border: 5px solid #eaeaea;
+        background: #fff;
+        -webkit-transition: all .50s ease;
+        -moz-transition: all .50s ease;
+        -ms-transition: all .50s ease;
+        -o-transition: all .50s ease;
+        transition: all .50s ease;
+        &:hover {
+            border:5px solid #ffbe00;
+            background: #eaeaea;   
+            .hover{
+                display: inline;
+            }
+        }
+        .hover {
+            padding-right: 5px;
+            color: #f4511e;
+            font-size: 20px;
+            font-family: $pop;
+            font-weight: 500;
+            display: none;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+
+/* End Our Affiliations Area css
+============================================================================================ */

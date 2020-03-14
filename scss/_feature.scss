@@ -139,9 +139,9 @@
             background: #e5e5e5;
             overflow: visible;
             .progress-bar{
-                background-image: -webkit-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(42,96,211) 100%);
-                background-image: -moz-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(42,96,211) 100%);
-                background-image: -ms-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(42,96,211) 100%);
+                background-image: -webkit-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(244,81,30) 100%);
+                background-image: -moz-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(244,81,30) 100%);
+                background-image: -ms-linear-gradient( 180deg, rgb(204,170,60) 0%, rgb(244,81,30) 100%);
                 position: relative;
                 overflow: visible;
                 background-color: transparent;
@@ -171,7 +171,7 @@
 /* Project Area css
 ============================================================================================ */
 .project_area{
-    background: url(../img/contact-us-wallpaper.jpg) no-repeat fixed center center;
+    background: url(../img/home/contact-us-wallpaper.jpg) no-repeat fixed center center;
     background-size: cover;
     position: relative;
     z-index: 3;

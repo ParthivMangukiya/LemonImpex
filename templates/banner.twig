@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="banner_text_inner">
+        <h4>{{title}}</h4>
+        <ul>
+            <li><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            {% for page in pages %}
+                <li><a href="{{page.link}}"><i class="fa fa-angle-right" aria-hidden="true"></i>{{page.title}}</a></li>
+            {% endfor %}
+            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Here</a></li>
+        </ul>
+    </div>
+</div>

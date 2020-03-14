@@ -1,10 +1,11 @@
-<div class="col-lg-4 col-md-6 event_container">
-    <div class="event_item event_sub_container">
+<div class="col-lg-4 event_container">
+    <div class="event_item">
         <div class="event_item_img"><a href="#"><img class="img-fluid" src="{{ img_src }}" alt=""></a></div>
-        <div class="event_item_content event_content_container">
+        <div class="event_item_content">
             <a href="#"><h4>{{ title }}</h4></a>
-            <p>{{ short_description }}</p>
-            <a class="more_btn" href="#">Learn More</a>
+            <a href="#" class="cal"><i class="fa fa-calendar" aria-hidden="true"></i> {{start_date}} <span>to</span> {{end_date}}</a>
+            <p>{{ description }}</p>
+            {# <a class="more_btn" href="#">Learn More</a> #}
         </div>
     </div>
 </div>
