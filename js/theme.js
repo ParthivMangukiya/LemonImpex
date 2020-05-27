@@ -26,22 +26,18 @@
     /*  Main Slider js
     /*----------------------------------------------------*/
     function main_slider(){
-        if ( $('#main_slider').length ){
+        if ($('#main_slider').css('display') != 'none' &&  $('#main_slider').length ){
+            $("#mobile_slider").remove();
             $("#main_slider").revolution({
                 sliderType:"standard",
-                sliderLayout:"fullwidth",
+                sliderLayout:"auto",
+                responsiveLevels: [1920, 1024, 480],
                 delay:5000,
                 disableProgressBar:"on",
-                gridwidth: 1920,
-                gridheight: 1080,
-                // parallax: {
-                //     type: 'scroll',
-                //     origo: 'slidercenter',
-                //     speed: 400,
-                //     levels: [5,10,15,20,25,30,35,40,
-                //              45,46,47,48,49,50,51,55],
-                //     disable_onmobile: 'on'
-                // },
+                gridwidth: [1920,480],
+                gridheight: [1080,720],
+                visibilityLevels:[1920, 480],
+                spinner: 'spinner4',
                 navigation: {
                     onHoverStop: 'off',
                     touch:{
@@ -70,9 +66,59 @@
                         }
                     }
                 },
-                // responsiveLevels:[4096,1320,1199,992,767,480],
-                // gridwidth:[1170,1170,960,720,700,300],
-                // gridheight:[900,900,900,800,500,500],
+
+                lazyType:"smart",
+                fallbacks: {
+                    simplifyAll:"off",
+                    nextSlideOnWindowFocus:"off",
+                    disableFocusListener:false,
+                }
+            })
+        }
+    }
+    
+    function mobile_slider(){
+        if ($('#mobile_slider').css('display') != 'none' && $('#mobile_slider').length ){
+            $("#main_slider").remove();
+            $("#mobile_slider").revolution({
+                sliderType:"standard",
+                sliderLayout:"auto",
+                responsiveLevels: [1920, 1024, 480],
+                delay:5000,
+                disableProgressBar:"on",
+                gridwidth: [1920,480],
+                gridheight: [1080,720],
+                visibilityLevels:[1920, 480],
+                spinner: 'spinner4',
+                navigation: {
+                    onHoverStop: 'off',
+                    touch:{
+                        touchenabled:"on"
+                    },
+                    arrows: {
+                        style:"zeus",
+                        enable:true,
+                        hide_onmobile:true,
+                        hide_under:820,
+                        hide_onleave:true,
+                        hide_delay:200,
+                        hide_delay_mobile:1200,
+                        tmp:'<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 5,
+                            v_offset: 0
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 5,
+                            v_offset: 0
+                        }
+                    }
+                },
+
                 lazyType:"smart",
                 fallbacks: {
                     simplifyAll:"off",
@@ -83,7 +129,7 @@
         }
     }
     main_slider();
-    
+    mobile_slider();
     /*----------------------------------------------------*/
     /* Offcanvas Menu js
     /*----------------------------------------------------*/

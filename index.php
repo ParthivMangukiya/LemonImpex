@@ -48,6 +48,7 @@ $twig = new Twig_Environment($loader, array(
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
     </head>
     <body>
 
@@ -65,18 +66,107 @@ $twig = new Twig_Environment($loader, array(
         ?>
 
         <!--================Slider Area =================-->
-        <section class="main_slider_area fullwidthbanner-container">
-            <div id="main_slider" class="rev_slider fullwidthabanner" data-version="5.3.1.6" >
-            <ul>
-                    <li data-index="rs-2946" data-transition="fade" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                        <img src="img/home-slider/slider.png"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                    </li>
-                    <li data-index="rs-2947" data-transition="fade" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1000"  data-rotate="0"  data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                        <img src="img/home-slider/slider2.png"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                    </li>
-                </ul>
+
+        <section class="main_slider_area">
+            <div style="width: auto; min-height=500px">
+                <div id="main_slider" class="rev_slider desktopslider" data-version="5.3.1.6" >
+                    <ul>
+                        <li data-index="rs-2946"
+                            data-transition="fade" 
+                            data-slotamount="1" 
+                            data-hideafterloop="0" 
+                            data-hideslideonmobile="off"  
+                            data-easein="default" 
+                            data-easeout="default" 
+                            data-masterspeed="1000"  
+                            data-rotate="0"  
+                            data-fsmasterspeed="1500" 
+                            data-fsslotamount="7" 
+                            data-saveperformance="off"  
+                            data-title="Intro">
+                            <img src="img/home-slider/heart.jpg" 
+                                alt="Finest Cut"  
+                                data-bgposition="center center" 
+                                data-bgfit="cover" 
+                                data-bgrepeat="no-repeat" 
+                                data-visibility="['off', 'off']"
+                                class="rev-slidebg" 
+                                data-no-retina>
+                        </li>
+                        <li data-index="rs-2947"
+                            data-transition="fade" 
+                            data-slotamount="1" 
+                            data-hideafterloop="0" 
+                            data-hideslideonmobile="off"  
+                            data-easein="default" 
+                            data-easeout="default" 
+                            data-masterspeed="1000"  
+                            data-rotate="0"  
+                            data-fsmasterspeed="1500" d
+                            ata-fsslotamount="7" 
+                            data-saveperformance="off"  
+                            data-title="Intro">
+                            <img src="img/home-slider/light/light1.jpg"  
+                                alt="Perfect Finish"  
+                                data-bgposition="center center" 
+                                data-bgfit="cover" 
+                                data-bgrepeat="no-repeat" 
+                                class="rev-slidebg" 
+                                data-no-retina>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mobile_slider" class="rev_slider mobileslider" data-version="5.3.1.6" >
+                    <ul>
+                        <li data-index="rs-2946"
+                            data-transition="fade" 
+                            data-slotamount="1" 
+                            data-hideafterloop="0" 
+                            data-hideslideonmobile="off"  
+                            data-easein="default" 
+                            data-easeout="default" 
+                            data-masterspeed="1000"  
+                            data-rotate="0"  
+                            data-fsmasterspeed="1500" 
+                            data-fsslotamount="7" 
+                            data-saveperformance="off"  
+                            data-title="Intro">
+                            <img src="img/home-slider/mobileleaf.jpg" 
+                                alt="Finest Cut"  
+                                data-bgposition="center center" 
+                                data-bgfit="cover" 
+                                data-bgrepeat="no-repeat" 
+                                data-visibility="['off', 'off']"
+                                class="rev-slidebg" 
+                                data-no-retina>
+                        </li>
+                        <li data-index="rs-2947"
+                            data-transition="fade" 
+                            data-slotamount="1" 
+                            data-hideafterloop="0" 
+                            data-hideslideonmobile="off"  
+                            data-easein="default" 
+                            data-easeout="default" 
+                            data-masterspeed="1000"  
+                            data-rotate="0"  
+                            data-fsmasterspeed="1500" d
+                            ata-fsslotamount="7" 
+                            data-saveperformance="off"  
+                            data-title="Intro">
+                            <img src="img/home-slider/mobilegreen.jpg"  
+                                alt="Perfect Finish"  
+                                data-bgposition="center center" 
+                                data-bgfit="cover" 
+                                data-bgrepeat="no-repeat" 
+                                class="rev-slidebg" 
+                                data-no-retina>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
+
+        
         <!--================End Slider Area =================-->
 
         <!--================Creative Feature Area =================-->
@@ -141,7 +231,7 @@ $twig = new Twig_Environment($loader, array(
                                     <img src="img/diamond.svg" height="100%" width="100%">
                                 </div>
                             </div><br>
-                            <h1 class="counter">500</h1>
+                            <h1 class="counter">533</h1>
                             <h4>Diamond</h4>
                         </div>
                     </div>
@@ -232,24 +322,26 @@ $twig = new Twig_Environment($loader, array(
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery-3.2.1.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
         <!-- Rev slider js -->
         <script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
         <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/theme.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
 
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/jquery.counterup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-        <script src="js/theme.js"></script>
+        
         <script>
             $('.counter').counterUp({
                 delay: 2,
                 time: 100
             });
         </script>
-
 
     </body>
 </html>

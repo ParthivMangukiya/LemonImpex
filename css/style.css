@@ -461,8 +461,22 @@ i:before {
 /*----------------------------------------------------*/
 /* Banner Area css
 ============================================================================================ */
-.banner_area {
+.banner_area-contactus {
+  background: url(../img/home/contact-us-wallpaper.jpg) no-repeat scroll center center;
+  background-size: cover;
+  position: relative;
+  min-height: 400px;
+}
+
+.banner_area-whyus {
   background: url(../img/home/leibish.jpg) no-repeat scroll center center;
+  background-size: cover;
+  position: relative;
+  min-height: 400px;
+}
+
+.banner_area-event {
+  background: url(../img/events.jpg) no-repeat scroll center center;
   background-size: cover;
   position: relative;
   min-height: 400px;
@@ -470,7 +484,7 @@ i:before {
 
 .banner_area:before {
   content: "";
-  background: rgba(4, 8, 29, 0.7);
+  background: rgba(4, 8, 29, 0.3);
   position: absolute;
   left: 0px;
   top: 0;
@@ -535,6 +549,19 @@ i:before {
 }
 
 .main_slider_area #main_slider ul li .slider_button .tp_btn {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.mobile_slider_area #mobile_slider ul li .slider_button .bg_btn {
+  display: inline-block;
+  line-height: 46px !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-right: 7px;
+}
+
+.mobile_slider_area #mobile_slider ul li .slider_button .tp_btn {
   display: inline-block;
   text-transform: uppercase;
 }
@@ -985,7 +1012,7 @@ i:before {
 /* Our Service Area css
 ============================================================================================ */
 .service_area {
-  background: url(../img/home/leibish.jpg) no-repeat fixed center center;
+  background: url(../img/numbers.jpg) no-repeat fixed center center;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -2232,3 +2259,18 @@ i:before {
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*# sourceMappingURL=style.css.map */
+
+@media only screen and (max-width: 480px) {
+  /* For mobile phones: */
+  .desktopslider {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 481px) {
+  /* For mobile phones: */
+  .mobileslider {
+    display: none;
+  }
+}

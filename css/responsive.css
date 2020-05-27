@@ -285,6 +285,11 @@
         margin-right: 0px;
         margin-bottom: 7px;
     }
+    .mobile_slider_area #mobile_slider ul li .slider_button .bg_btn {
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 7px;
+    }
     .tp_btn {
         width: 160px;
         text-align: center;

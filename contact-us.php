@@ -55,7 +55,7 @@
         ?>
 
         <!--================Banner Area =================-->
-        <section class="banner_area">
+        <section class="banner_area banner_area-contactus">
             <div class="container">
                 <div class="banner_text_inner">
                     <h4>Contact Us</h4>

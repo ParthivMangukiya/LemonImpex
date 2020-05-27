@@ -118,12 +118,17 @@ class ComposerStaticInit184b28d66503bf9001af8f503da005d1
         ),
     );
 
+    public static $classMap = array (
+        'SimpleXLSX' => __DIR__ . '/..' . '/shuchkin/simplexlsx/src/SimpleXLSX.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit184b28d66503bf9001af8f503da005d1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit184b28d66503bf9001af8f503da005d1::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit184b28d66503bf9001af8f503da005d1::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit184b28d66503bf9001af8f503da005d1::$classMap;
 
         }, null, ClassLoader::class);
     }
